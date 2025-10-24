@@ -1,0 +1,19 @@
+class Employee:
+    def __init__(self, name, age):
+        self._name = name  # Қорғалған атрибут
+        self.__age = age   # Жеке атрибут
+
+    def get_age(self):  # Жасы меншіктеу әдісі
+        return self.__age
+
+    def set_age(self, age):  # Жасы орнату әдісі
+        if age > 0:
+            self.__age = age
+        else:
+            print("Жасы дұрыс емес")
+
+# Класс қолдану
+person = Person("Айжан", 25)
+print(person.get_age())  # 25
+person.set_age(30)
+print(person.get_age())  # 30
