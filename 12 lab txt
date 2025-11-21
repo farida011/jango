@@ -1,0 +1,159 @@
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    def move(self):
+        pass
+
+    def fuel_type(self):
+        pass
+
+class Car(Vehicle):
+    def move(self):
+        return "Car is moving on 4 wheels"
+
+    def fuel_type(self):
+        return "Petrol or Diesel"
+
+class Bicycle(Vehicle):
+    def move(self):
+        return "Bicycle is moving with pedal power"
+
+    def fuel_type(self):
+        return "No fuel required"
+
+
+from abc import ABC, abstractmethod
+
+class DatabaseInterface(ABC):
+    def connect(self):
+        pass
+
+    def execute_query(self):
+        pass
+
+    def close(self):
+        pass
+
+class SQLiteDatabase(DatabaseInterface):
+    def connect(self):
+        print("Connecting to SQLite...")
+
+    def execute_query(self):
+        print("Executing SQLite query...")
+
+    def close(self):
+        print("Closing SQLite connection...")
+
+class PostgreSQLDatabase(DatabaseInterface):
+    def connect(self):
+        print("Connecting to PostgreSQL...")
+
+    def execute_query(self):
+        print("Executing PostgreSQL query...")
+
+    def close(self):
+        print("Closing PostgreSQL connection...")
+
+
+
+from abc import ABC, abstractmethod
+
+class DatabaseInterface(ABC):
+    def connect(self):
+        pass
+
+    def execute_query(self):
+        pass
+
+    def close(self):
+        pass
+
+class SQLiteDatabase(DatabaseInterface):
+    def connect(self):
+        print("Connecting to SQLite...")
+
+    def execute_query(self):
+        print("Executing SQLite query...")
+
+    def close(self):
+        print("Closing SQLite connection...")
+
+class PostgreSQLDatabase(DatabaseInterface):
+    def connect(self):
+        print("Connecting to PostgreSQL...")
+
+    def execute_query(self):
+        print("Executing PostgreSQL query...")
+
+    def close(self):
+        print("Closing PostgreSQL connection...")
+
+
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    def move(self):
+        pass
+
+class Car(Vehicle):
+    def move(self):
+        return "Car moving"
+
+class Bicycle(Vehicle):
+    def move(self):
+        return "Bicycle moving"
+
+class Airplane(Vehicle):
+    def move(self):
+        return "Airplane flying"
+
+class Train(Vehicle):
+    def move(self):
+        return "Train running on rail"
+
+vehicles = [Car(), Bicycle(), Airplane(), Train()]
+for v in vehicles:
+    print(v.move())
+
+
+from abc import ABC, abstractmethod
+
+class PaymentSystem(ABC):
+    def authorize(self):
+        pass
+
+    def process(self):
+        pass
+
+    def refund(self):
+        pass
+
+class PayPal(PaymentSystem):
+    def authorize(self):
+        print("PayPal: Authorization successful")
+
+    def process(self):
+        print("PayPal: Payment processed")
+
+    def refund(self):
+        print("PayPal: Refund completed")
+
+class KaspiPay(PaymentSystem):
+    def authorize(self):
+        print("KaspiPay: Authorization successful")
+
+    def process(self):
+        print("KaspiPay: Payment processed")
+
+    def refund(self):
+        print("KaspiPay: Refund completed")
+
+class VisaPayment(PaymentSystem):
+    def authorize(self):
+        print("Visa: Authorization complete")
+
+    def process(self):
+        print("Visa: Payment processed")
+
+    def refund(self):
+        print("Visa: Refund processed")
